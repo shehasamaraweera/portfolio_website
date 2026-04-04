@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    background: rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-weight: 600;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    gap: clamp(1rem, 3vw, 2rem);
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #fff;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    transition: color 0.3s;
+    white-space: nowrap;
+}
+
+nav a:hover,
+nav a.active {
+    color: #667eea;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: clamp(2rem, 5vh, 5rem) 5%;
+    width: 100%;
+    min-height: 100vh;
+    gap: 2rem;
+}
+
+.home-img {
+    flex: 1;
+    min-width: 200px;
+}
+
+.home-img img {
+    max-width: clamp(200px, 80vw, 600px);
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.home-content {
+    flex: 1;
+    color: #fff;
+    margin-left: clamp(0, 5vw, 50px);
+    min-width: 200px;
+}
+
+.home-content h1 {
+    font-size: clamp(2rem, 7vw, 3.5rem);
+    margin-bottom: 1rem;
+}
+
+.home-content h1 span {
+    color: #667eea;
+}
+
+.home-content h3 {
+    font-size: clamp(1.3rem, 5vw, 2rem);
+    margin-bottom: 1rem;
+}
+
+.home-content p {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.social-icons a {
+    width: clamp(3rem, 8vw, 4rem);
+    height: clamp(3rem, 8vw, 4rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #667eea;
+    color: #fff;
+    border-radius: 50%;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    transition: background 0.3s;
+}
+
+.social-icons a:hover {
+    background: #764ba2;
+}
+
+.btn {
+    display: inline-block;
+    padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
+    background: #667eea;
+    color: #fff;
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #764ba2;
+}
+
+/* Tablet (600px - 900px) */
+@media (max-width: 900px) {
+    header {
+        padding: 1.5rem 5%;
+    }
+
+    .home {
+        justify-content: center;
+    }
+
+    .home-content {
+        margin-left: 0;
+    }
+}
+
+/* Small Tablet (480px - 600px) */
+@media (max-width: 600px) {
+    header {
+        padding: 1rem 4%;
+    }
+
+    nav {
+        gap: 0.5rem;
+        width: 100%;
+        order: 3;
+        margin-top: 1rem;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 4%;
+        min-height: auto;
+        gap: 1.5rem;
+    }
+
+    .home-img {
+        order: 1;
+    }
+
+    .home-content {
+        order: 2;
+    }
+
+    .home-img img {
+        max-width: 250px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Mobile (below 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 1rem 3%;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        gap: 0.3rem;
+    }
+
+    nav a {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.5rem;
+    }
+
+    .home {
+        padding: 1.5rem 3%;
+    }
+
+    .home-img img {
+        max-width: 180px;
+    }
+
+    .home-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .home-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Large screens (1200px+) */
+@media (min-width: 1200px) {
+    .home {
+        padding: 5rem 10%;
+    }
+}
